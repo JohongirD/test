@@ -1,0 +1,177 @@
+.hero{
+    display: flex;
+    height: 100vh;
+    column-gap:30px;
+    padding: 80px 0;
+    margin: 0 auto;
+    justify-content: center;
+    // align-items:center;
+    @include phone{
+        flex-direction:column;
+        padding:40px 0;
+        align-items:center;
+        row-gap: 40px;
+        justify-content: flex-start;
+    }
+    &__left{
+        max-width: 510px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        @include tablet{
+            max-width: 330px;
+        }
+        @include phone{
+            max-width: 315px;
+        }
+        &__text{
+            width: 100%;
+            &__title{
+                font-family: $title-font;
+                font-size: 67px;
+                font-weight: 600;
+                line-height: 73.7px;
+                text-transform: capitalize;
+                width: 99%;
+                @include tablet{
+                    font-size: 38px;
+                    line-height: 45.6px;
+                }
+                @include phone{
+                    font-size: 28px;
+                    line-height: 39.2px;
+                }
+            }
+            &__info{
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 35.2px; 
+                text-transform: capitalize;
+                width: 100%;
+                @include tablet{
+                    font-size: 16px;
+                    line-height: 22.4px;
+                    text-transform: none;
+                }
+            }
+        }
+        &__btn{
+            display: flex;
+            column-gap:12px;
+            justify-content: center;
+            align-items:center;
+            padding: 0 50px;
+            height: 60px;
+            // height: 100%;
+            max-width: 224px;
+            background-color:$button-bg-color;
+            text-align: center;
+            font-family: $title-font;
+            color:$white-color;
+            font-size: 16px;
+            font-weight: 600;
+            line-height:22.4px;
+            border-radius: 20px;
+            @include phone{
+                max-width: 315px;
+                width: 100%;
+            }
+        }
+        &__btn:hover{
+            background-color:$white-color;
+            color:$button-bg-color;
+        }
+        &__info{
+            display: flex;
+            column-gap:30px;
+            align-items:center;
+            &__card{
+                max-width:150px;
+                width: 100%;
+                @include tablet{
+                    max-width: 90px;
+                }
+                @include phone{
+                    max-width: 85px;
+                }
+                &__amount{
+                    font-family: $info-font;
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: 39.2px;
+                    text-transform: capitalize;
+                    @include tablet{
+                        font-size: 22px;
+                        line-height: 35.2px;
+                    }
+                }
+                &__name{
+                    font-size: 23.99px;
+                    font-weight: 400;
+                    line-height: 38.384px ;
+                    text-transform: capitalize;
+                    @include tablet{
+                        font-size: 16px;
+                        line-height: 22.4px;
+                    }
+                }
+            }
+        }
+    }
+    &__right{
+        background-color:$bg-second-color;
+        max-width: 510px;
+        max-height: 510px;
+        border-radius:20px;
+        @include tablet{
+            max-width: 330px;
+            max-height: 330px;
+        }
+        @include phone{
+            display: none;
+            max-width: 315px;
+        }
+        &__img{
+            @include tablet{
+                max-height: 221px;
+            }
+            @include phone{
+                max-height:206px;
+                max-width: 315px;
+                width:100%;
+            }
+        }
+        &__text{
+            padding: 20px;
+            @include phone{
+                width: 100%;
+            }
+            &__name{
+                font-family: $title-font;
+                font-size: 22px;
+                font-weight: 600;
+                line-height: 30.8px;
+                text-transform: capitalize;
+                margin-bottom: 10px;
+            }
+            &__img-author{
+                display: flex;
+                align-items:center;
+                column-gap: 12px;
+                &__name{
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 140%;
+                }
+            }
+        }
+    }
+}
+.help{
+    display: none;
+    @include phone{
+        display: block;
+        background-color:$bg-second-color;
+        border-radius:20px;
+    }
+}

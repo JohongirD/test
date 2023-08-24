@@ -1,0 +1,115 @@
+header{
+    position: relative;
+    height: 100vh;
+}
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+    height: 100%;
+    padding: 20px 0;
+    &__menu{
+        display: flex;
+        align-items:center;
+        text-align: center;
+        @include tablet{
+            text-align: center;
+            flex-direction: column;
+            justify-content: space-around;
+            max-width: 47vw;
+            height: 37vh;
+            margin: 0 auto;
+            width: 100%;
+            position: fixed;
+            top: 75px;
+            right: -6px;
+            row-gap: 30px;
+            padding: 30px 10px 0 10px;
+            transform: translateX(100%);
+            transition: 0.4s ease;
+            background-color: $bg-second-color;
+            border: 2px solid $button-bg-color;
+        }
+        @include phone{
+            height: 56vh;
+            max-width: 100vw;
+            /* row-gap: 50px; */
+            justify-content: flex-start
+        }
+        &__ul{
+            display: flex;
+            column-gap: 10px;
+            @include tablet{
+                flex-direction: column;
+                row-gap: 30px;
+            }
+            &__link{
+                color: $white-color;
+                font-family: $title-font;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 22.4px; 
+                padding: 12px 20px;
+            }
+        }
+        &__btn{
+            display: flex;
+            column-gap:12px;
+            justify-content: center;
+            padding: 17px 30px;
+            background-color:$button-bg-color;
+            color: $white-color;
+            text-align: center;
+            font-family: $title-font;
+            font-size: 16px;
+            font-weight: 600;
+            line-height:22.4px;
+            border-radius: 20px;
+        }
+        &__btn:hover {
+            color:$button-bg-color;
+            background-color:$white-color;
+            transition: 0.3s ease;
+        }
+        &__btns{
+            display: none;
+            @include tablet{
+                display: block;
+            }
+        }
+        &__btns button{
+            background:none;
+            border:none;
+        }
+        &__add-btn{
+            @include tablet{
+                display: block;
+            }
+        }
+        &__romove-btn{
+            display: none;
+            @include tablet{
+                display: none;
+                color:$white-color;
+            }
+        }
+    }
+}
+.btn-remove{
+    display: none;
+}
+.show{
+    transform: translateX(0);
+    @include phone{
+        transform: translate(0);
+    }
+}
+
+// .test{
+//     font-family: $info-font;
+//     margin: 0 auto;
+//     color:white;
+// }
