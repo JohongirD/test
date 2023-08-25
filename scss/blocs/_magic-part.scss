@@ -1,12 +1,12 @@
 .magic{
-    background-image: url(../../images/magic-bg.jpg);
+    background-image: url(../images/magic-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     @include tablet{
-        background-image: url(../../images/magic-bg-tablet.jpg);
+        background-image: url(../images/magic-bg-tablet.jpg);
     }
     @include phone{
-        background-image:url(../../images/magic-bg-phone.jpg);
+        background-image:url(../images/magic-bg-phone.jpg);
     }
 }
 .magic-bg{
